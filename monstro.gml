@@ -13,6 +13,8 @@ estado_persegue = function () {
 
 if (!instance_exists(obj_personagem)) {
     exit;
+    lives -= 1;
+    audio_play_sound(snd_PlayerDead, 1, false);
 }
 
 var _direcao = point_direction(x, y, obj_personagem.x, obj_personagem.y);
