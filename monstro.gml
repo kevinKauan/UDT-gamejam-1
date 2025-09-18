@@ -1,7 +1,10 @@
 estado_persegue = function () {
-    if (instace_exist(alvo)){
+    if (instance_exists(alvo)) {
         var direcao = point_direction(x, y, alvo.x, alvo.y);
-        velocidade_vertical = lengthdir_x(velocidade, direcao);
+        var vx = lengthdir_x(velocidade, direcao);
+        var vy = lengthdir_y(velocidade, direcao);
         
-velocidade_horizontal
+        x += vx;
+        y += vy;
+    }
 }
